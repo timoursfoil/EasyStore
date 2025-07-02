@@ -26,8 +26,7 @@ Players.PlayerAdded:Connect(function(player)
 	Leaderstats(player) -- Create leaderstats for player
 	task.wait(2)
 	while true do
-		local gold = EasyStore:Get(player, "Gold") -- Gets the Gold value
-		EasyStore:Set(player, "Gold", gold + 10) -- Adds 10 to the gold value. (Use :Increment as a better way)
+		EasyStore:Increment(player, "Gold", 10)
 		Leaderstats(player) -- Updates leaderstats
 		task.wait(2)
 	end
